@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Contact me",
+    "menu_open": "Open navigation menu",
+    "menu_close": "Close navigation menu"
+  },
+  "hero": {
+    "eyebrow": "Frontend Engineer",
+    "greeting": "Hello,",
+    "name": "I'm Yaroslav Radchuk",
+    "phrases": ["Frontend developer", "6+ years of experience", "Vue · TypeScript · React"],
+    "bio": "Experienced frontend developer specializing in Vue.js, React, and TypeScript. Building scalable, high-performance web applications — from architecture to production.",
+    "cta_email": "Email me",
+    "cta_telegram": "Telegram"
+  },
+  "about": {
+    "eyebrow": "About",
+    "heading": "Who I am.",
+    "body": "With a background in Computer Science, I've spent 6 years building complex frontend products — from SaaS platforms and CRM systems to real-time applications and SSR-optimized Nuxt apps. I specialize in Vue.js and React, writing maintainable, well-tested code and contributing to architecture decisions, code reviews, and team mentoring."
+  },
+  "built": {
+    "eyebrow": "Selected Work",
+    "heading": "What I've built.",
+    "cards": {
+      "highload": {
+        "title": "High-Load Platforms",
+        "description": "SaaS products built for high-traffic environments. Focus on bundle optimization, runtime performance, and scalable component architecture."
+      },
+      "crm": {
+        "title": "CRM Systems",
+        "description": "Complex user flows, data-driven dashboards, membership and subscription logic for business-critical products."
+      },
+      "realtime": {
+        "title": "Real-Time Features",
+        "description": "WebSockets integration, live data feeds, and real-time UI updates for interactive and collaborative products."
+      },
+      "nuxt": {
+        "title": "Nuxt / SSR Apps",
+        "description": "Server-side rendering, static generation, and SEO-optimized applications built with Nuxt and advanced routing."
+      },
+      "spa": {
+        "title": "SPA Landing Pages",
+        "description": "Fast, visually rich single-page landing experiences with smooth animations, scroll reveals, and conversion-focused UI."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Expertise",
+    "heading": "My stack.",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "expert": "Expert",
+    "intermediate": "Intermediate"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "heading": "Where I've worked.",
+    "evoplay": {
+      "role": "Senior Frontend Developer",
+      "period": "Jan 2026 – present",
+      "bullets": [
+        "Enterprise SaaS with Vue.js, TypeScript, Composition API, Pinia",
+        "Authentication, dashboards, subscriptions, membership logic for high-traffic products",
+        "Performance optimization: bundle size and runtime efficiency",
+        "Cross-functional collaboration: design, backend, QA, stakeholders"
+      ]
+    },
+    "skelar": {
+      "role": "Middle Frontend Developer",
+      "period": "Feb 2023 – Jan 2026",
+      "bullets": [
+        "Built Vue.js project from scratch — architecture design and core business features",
+        "Authorization, membership, and user dashboards",
+        "Led code reviews, mentored developers, facilitated onboarding",
+        "High code quality, maintainability, and business alignment"
+      ]
+    },
+    "sigma": {
+      "role": "Frontend Developer",
+      "period": "Nov 2020 – Feb 2023",
+      "bullets": [
+        "Responsive web applications with Vue.js and React.js",
+        "Semantic HTML/CSS, cross-browser testing and debugging",
+        "Agile collaboration with designers, developers, and product teams",
+        "Performance and cross-browser compatibility optimization"
+      ]
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "line1": "Let's build something",
+    "line2": "cosmic together.",
+    "sub": "Remote-first. Available for hire.",
+    "cta_email": "Email me",
+    "cta_telegram": "Telegram",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2026 Yaroslav Radchuk"
+  }
+}

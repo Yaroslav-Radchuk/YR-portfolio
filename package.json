@@ -1,0 +1,31 @@
+{
+  "name": "hiring-landing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tsparticles/slim": "^4.2.1",
+    "@tsparticles/vue3": "^4.2.1",
+    "@vercel/analytics": "^2.0.1",
+    "sass": "^1.101.0",
+    "vue": "^3.5.12",
+    "vue-i18n": "^9.14.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitest/coverage-v8": "^2.1.9",
+    "@vue/test-utils": "^2.4.11",
+    "happy-dom": "^20.10.6",
+    "jsdom": "^29.1.1",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.9",
+    "vue-tsc": "^2.1.8"
+  }
+}
