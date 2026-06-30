@@ -65,14 +65,14 @@ defineProps<{
     font-weight: var(--font-weight-semibold);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-plum-voltage);
+    color: #fff;
     white-space: nowrap;
   }
 
   &__role {
     font-size: var(--text-body-sm);
-    color: var(--color-plum-voltage);
-    margin-bottom: var(--spacing-18);
+    color: #a17eff;
+    margin: var(--spacing-18) 0;
   }
 
   &__bullets {

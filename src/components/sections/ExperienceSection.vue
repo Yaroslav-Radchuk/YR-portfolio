@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRevealOnScroll } from '@/composables/useRevealOnScroll'
 import SectionEyebrow from '@/components/ui/SectionEyebrow.vue'
 import ExperienceCard from '@/components/ui/ExperienceCard.vue'
@@ -13,6 +14,41 @@ const jobs = [
   { key: 'skelar', company: 'Skelar', year: '2023' },
   { key: 'sigma', company: 'Sigma Software', year: '2020' },
 ]
+
+const stopRefs = ref<(HTMLElement | null)[]>([])
+const visibleStops = ref<boolean[]>(jobs.map(() => false))
+let stopObserver: IntersectionObserver | null = null
+
+onMounted(() => {
+  stopObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) {
+          continue
+        }
+
+        const index = stopRefs.value.indexOf(entry.target as HTMLElement)
+
+        if (index !== -1) {
+          visibleStops.value[index] = true
+          stopObserver?.unobserve(entry.target)
+        }
+      }
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '-80px 0px',
+    },
+  )
+
+  for (const el of stopRefs.value) {
+    if (el) {
+      stopObserver.observe(el)
+    }
+  }
+})
+
+onUnmounted(() => stopObserver?.disconnect())
 </script>
 
 <template>
@@ -35,8 +71,9 @@ const jobs = [
         <div
           v-for="(job, i) in jobs"
           :key="job.key"
+          :ref="(el) => (stopRefs[i] = el as HTMLElement)"
           class="exp-roadmap__stop"
-          :style="`--i: ${i}`"
+          :class="{ 'is-visible': visibleStops[i] }"
         >
           <div class="exp-roadmap__milestone" aria-hidden="true">
             <span class="exp-roadmap__year">{{ job.year }}</span>
@@ -95,27 +132,6 @@ $track-left: calc(#{$year-w} + #{$gap} + #{$node-d} * 0.5);
     .exp-roadmap__track {
       animation: draw-track 1.6s cubic-bezier(0.16, 1, 0.3, 1) both 0.65s;
     }
-
-    .exp-roadmap__stop {
-      animation: stop-enter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-
-      &:nth-child(1) {
-        animation-delay: 0.65s;
-      }
-
-      &:nth-child(2) {
-        animation-delay: 0.95s;
-      }
-
-      &:nth-child(3) {
-        animation-delay: 1.25s;
-      }
-    }
-
-    .exp-roadmap__ring {
-      animation: pulse-ring 2.6s ease-out infinite;
-      animation-delay: calc(var(--i) * 0.3s + 0.9s);
-    }
   }
 }
 
@@ -146,6 +162,15 @@ $track-left: calc(#{$year-w} + #{$gap} + #{$node-d} * 0.5);
     opacity: 0;
     transform: translateX(36px);
 
+    &.is-visible {
+      animation: stop-enter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+      .exp-roadmap__ring {
+        animation: pulse-ring 2.6s ease-out infinite;
+        animation-delay: 0.4s;
+      }
+    }
+
     &:last-child {
       padding-bottom: 0;
     }
@@ -167,7 +192,7 @@ $track-left: calc(#{$year-w} + #{$gap} + #{$node-d} * 0.5);
     font-family: var(--font-acronym);
     font-weight: var(--font-weight-semibold);
     letter-spacing: 0.1em;
-    color: var(--color-plum-voltage);
+    color: #a17eff;
   }
 
   &__node {

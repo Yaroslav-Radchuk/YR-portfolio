@@ -78,9 +78,9 @@ const categories: Category[] = [
 
 const cardProgress = categories.map(() => ref(0))
 
-const COUNT_DURATION = 2400
-const CARD_STAGGER = 2700
-const INITIAL_DELAY = 500
+const COUNT_DURATION = 1300
+const CARD_STAGGER = 1400
+const INITIAL_DELAY = 300
 
 const timers: ReturnType<typeof setTimeout>[] = []
 const rafs: number[] = []
@@ -209,19 +209,19 @@ onUnmounted(() => {
     }
 
     .skills-card:nth-child(1) {
-      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 0.5s;
+      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 0.3s;
     }
 
     .skills-card:nth-child(2) {
-      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 3.2s;
+      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 1.7s;
     }
 
     .skills-card:nth-child(3) {
-      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 5.9s;
+      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 3.1s;
     }
 
     .skills-card:nth-child(4) {
-      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 8.6s;
+      animation: void-emerge-subtle 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 4.5s;
     }
   }
 }
@@ -282,7 +282,7 @@ onUnmounted(() => {
     transition: color 0.5s ease;
 
     &--done {
-      color: var(--color-plum-voltage);
+      color: #a17eff;
     }
   }
 }

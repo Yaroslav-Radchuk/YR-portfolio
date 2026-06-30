@@ -211,7 +211,7 @@ const { index } = useTextCycle(() => phrases.value.length, PHRASE_INTERVAL)
     grid-template-rows: auto 50vh;
 
     &__text {
-      padding: 120px var(--spacing-24) var(--spacing-36);
+      padding: 80px var(--spacing-24) 0 var(--spacing-36);
     }
 
     &__fullname {

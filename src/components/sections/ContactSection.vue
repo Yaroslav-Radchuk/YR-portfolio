@@ -6,8 +6,8 @@ import SectionEyebrow from '@/components/ui/SectionEyebrow.vue'
 import PlanetGlobe from '@/components/ui/PlanetGlobe.vue'
 
 const { targetRef: sectionRef, isVisible } = useRevealOnScroll({
-  threshold: 0.12,
-  rootMargin: '-60px 0px',
+  threshold: 0.3,
+  rootMargin: '-120px 0px',
 })
 
 const { isPast } = useEvaporate(sectionRef)
@@ -106,7 +106,7 @@ const isHovering = ref(false)
     align-items: center;
     text-align: center;
     gap: var(--spacing-18);
-    padding: 0 var(--spacing-36) 230px;
+    padding: 0 var(--spacing-36) 290px;
     max-width: 680px;
     transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
   }
@@ -155,8 +155,6 @@ const isHovering = ref(false)
     justify-content: center;
     gap: var(--spacing-12);
     margin-top: 4px;
-    opacity: 0;
-    transform: translateY(20px);
   }
 
   &__card {
@@ -215,10 +213,6 @@ const isHovering = ref(false)
 
     .contact__sub {
       animation: void-emerge 2s cubic-bezier(0.16, 1, 0.3, 1) both 0.68s;
-    }
-
-    .contact__cards {
-      animation: void-emerge-subtle 1.8s cubic-bezier(0.16, 1, 0.3, 1) both 0.92s;
     }
   }
 
