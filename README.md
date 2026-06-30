@@ -2,7 +2,7 @@
 
 Cosmic-themed portfolio landing page with Canvas animations and bilingual support.
 
-**[→ Live Demo](https://yaroslav-radchuk.dev/)**
+**[→ Live Demo](https://yaroslav-radchuk.vercel.app/)**
 
 ---
 
