@@ -106,7 +106,7 @@ const isHovering = ref(false)
     align-items: center;
     text-align: center;
     gap: var(--spacing-18);
-    padding: 0 var(--spacing-36) 240px;
+    padding: 0 var(--spacing-36) 230px;
     max-width: 680px;
     transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
   }
